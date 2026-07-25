@@ -3,7 +3,7 @@
 Lagi belajar/fokus di bidang: <misal: Web Dev / Network / Debian Server>
 
 ### Tech Stack
-- HTML / CSS / JavaScript <img src="https://i.pinimg.com/736x/85/5d/d8/855dd8d3bfa7a88d8f4433293a48d18e.jpg" width="100" height="100" style="object-fit: cover;" alt="Lucu">
+- HTML / CSS / JavaScript                  <img src="https://i.pinimg.com/736x/85/5d/d8/855dd8d3bfa7a88d8f4433293a48d18e.jpg" width="100" height="100" style="object-fit: cover;" alt="Lucu">
 - Python
 - Linux / Server
 
