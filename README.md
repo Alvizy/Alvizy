@@ -10,7 +10,7 @@ Lagi belajar/fokus di bidang: <misal: Web Dev / Network / Debian Server>
 ---
 
 ### Meme / GIF
-![Lucu](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3JpMnIzczNwd3I1NzdyZ2VvOXkyYXRjZ2t4ZXdtNjQzbzE2eHNnbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/L1R1tvI9svvyy4pIrB/giphy.gif)
+![Lucu](https://i.pinimg.com/736x/85/5d/d8/855dd8d3bfa7a88d8f4433293a48d18e.jpg)
 
 ---
 
