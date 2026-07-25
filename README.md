@@ -1,16 +1,18 @@
-## Hi there 👋
+# Halo, gue Alvizy
 
-<!--
-**Alvizy/Alvizy** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Lagi belajar/fokus di bidang: <misal: Web Dev / Network / Debian Server>
 
-Here are some ideas to get you started:
+### Tech Stack
+- HTML / CSS / JavaScript
+- Python
+- Linux / Server
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+### Meme / GIF
+![Lucu](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3JpMnIzczNwd3I1NzdyZ2VvOXkyYXRjZ2t4ZXdtNjQzbzE2eHNnbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/L1R1tvI9svvyy4pIrB/giphy.gif)
+
+---
+
+### Stats
+![Statistik GitHub](https://github-readme-stats.vercel.app/api?username=USERNAME_BARU_LU&show_icons=true&theme=dark)
