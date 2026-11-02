@@ -1,0 +1,40 @@
+/* aurora — monokrom, subtle */
+.aurora {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.aurora-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  animation: aurora-drift linear infinite;
+}
+.aurora-blob:nth-child(1) {
+  width: 700px; height: 500px;
+  background: radial-gradient(ellipse, rgba(255,255,255,0.04), transparent 70%);
+  top: -15%; left: -5%;
+  animation-duration: 22s;
+}
+.aurora-blob:nth-child(2) {
+  width: 500px; height: 400px;
+  background: radial-gradient(ellipse, rgba(255,255,255,0.025), transparent 70%);
+  top: 40%; right: -10%;
+  animation-duration: 28s;
+  animation-delay: -8s;
+}
+.aurora-blob:nth-child(3) {
+  width: 400px; height: 300px;
+  background: radial-gradient(ellipse, rgba(255,255,255,0.02), transparent 70%);
+  bottom: -5%; left: 25%;
+  animation-duration: 20s;
+  animation-delay: -14s;
+}
+@keyframes aurora-drift {
+  0%   { transform: translate(0, 0) scale(1); }
+  33%  { transform: translate(30px, -20px) scale(1.04); }
+  66%  { transform: translate(-20px, 30px) scale(0.97); }
+  100% { transform: translate(0, 0) scale(1); }
+}

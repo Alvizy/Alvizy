@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin — Skills</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="admin-nav">
+  <span style="color:var(--cyan);font-weight:700">Admin</span>
+  <a href="{{.AdminPath}}">Dashboard</a>
+  <a href="{{.AdminPath}}/bio">Bio</a>
+  <a href="{{.AdminPath}}/skills">Skills</a>
+  <a href="{{.AdminPath}}/projects">Projects</a>
+  <a href="/" target="_blank">↗ Lihat Web</a>
+  <span class="logout">
+    <form method="POST" action="{{.AdminPath}}/logout">
+      <button type="submit">Logout</button>
+    </form>
+  </span>
+</div>
+<div class="admin-wrap">
+  <p class="admin-title">Skills</p>
+
+  <form method="POST" action="{{.AdminPath}}/skills/create" style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:2rem;align-items:flex-end">
+    <div class="form-group" style="flex:1;min-width:150px;margin:0">
+      <label>Nama Skill</label>
+      <input type="text" name="name" required placeholder="e.g. Go">
+    </div>
+    <div class="form-group" style="flex:1;min-width:150px;margin:0">
+      <label>Kategori</label>
+      <input type="text" name="category" placeholder="e.g. Backend" value="Other">
+    </div>
+    <button type="submit">+ Tambah</button>
+  </form>
+
+  {{if .Skills}}
+  <table>
+    <thead>
+      <tr><th>Nama</th><th>Kategori</th><th></th></tr>
+    </thead>
+    <tbody>
+      {{range .Skills}}
+      <tr>
+        <td>{{.Name}}</td>
+        <td style="color:var(--muted)">{{.Category}}</td>
+        <td>
+          <form method="POST" action="{{$.AdminPath}}/skills/delete/{{.ID}}" style="display:inline">
+            <button type="submit" class="btn-danger">Hapus</button>
+          </form>
+        </td>
+      </tr>
+      {{end}}
+    </tbody>
+  </table>
+  {{else}}
+  <p style="color:var(--muted)">Belum ada skill.</p>
+  {{end}}
+</div>
+</body>
+</html>

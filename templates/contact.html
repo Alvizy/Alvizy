@@ -1,0 +1,219 @@
+<!DOCTYPE html><html class="dark scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Fanz — About</title>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Fonts: Newsreader (Editorial Serif), Inter, and JetBrains Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+
+
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Newsreader', 'Georgia', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            obsidian: {
+              DEFAULT: '#101014',
+              surface: '#15151b',
+              card: '#1a1b23',
+              border: 'rgba(255, 255, 255, 0.08)',
+              subtle: 'rgba(255, 255, 255, 0.04)',
+            },
+            crimson: {
+              DEFAULT: 'var(--accent)',
+              muted: 'rgba(223, 48, 72, 0.15)',
+              glow: 'rgba(223, 48, 72, 0.25)',
+            },
+            silver: {
+              DEFAULT: '#F5F5F7',
+              muted: '#9CA3AF',
+              dark: '#585A65',
+            }
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    /* Liquid Glass Material Utilities */
+    .glass-dock {
+      background: rgba(20, 20, 26, 0.72);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.8),
+                  inset 0 1px 0 0 rgba(255, 255, 255, 0.15),
+                  inset 0 0 12px 0 rgba(223, 48, 72, 0.04);
+    }
+
+    .liquid-glass-action {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 4px 16px -4px rgba(0, 0, 0, 0.4),
+                  inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .liquid-glass-action:hover {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(223, 48, 72, 0.45);
+      box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.5),
+                  0 0 16px -4px rgba(223, 48, 72, 0.2),
+                  inset 0 1px 0 0 rgba(255, 255, 255, 0.16);
+      transform: translateY(-1px);
+    }
+
+    /* Ambient Subtle Crimson Lighting */
+    .crimson-ambient {
+      position: fixed;
+      top: 15%;
+      right: 12%;
+      width: 520px;
+      height: 520px;
+      background: radial-gradient(circle, rgba(223, 48, 72, 0.06) 0%, rgba(16, 16, 20, 0) 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .crimson-ambient-2 {
+      position: fixed;
+      bottom: 12%;
+      left: 8%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(223, 48, 72, 0.04) 0%, rgba(16, 16, 20, 0) 75%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .liquid-glass-action:hover {
+        transform: none !important;
+      }
+      * {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-[#101014] text-silver font-sans antialiased selection:bg-crimson/25 selection:text-white min-h-screen md:h-screen md:overflow-hidden relative flex flex-col justify-between">
+<!-- Ambient background glow layers -->
+<div class="crimson-ambient"></div>
+<div class="crimson-ambient-2"></div>
+<!-- Persistent Site Header -->
+<header class="relative z-20 w-full max-w-6xl mx-auto px-6 sm:px-10 pt-7 pb-4 flex items-center justify-between shrink-0">
+<div class="flex items-center space-x-3">
+<a class="font-mono text-2xl tracking-tight text-white hover:text-silver transition-colors" href="#">Fanz</a>
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-crimson animate-pulse"></span>
+</div>
+<div class="flex items-center space-x-4 text-xs font-mono text-silver-muted">
+<div class="hidden sm:flex items-center space-x-2 px-3 py-1 rounded-full bg-white/[0.03] border border-white/[0.05]">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+<span class="">INDONESIA</span>
+<span class="text-silver-dark">•</span>
+<span class="">UTC+7</span>
+</div>
+<div class="flex items-center space-x-2 px-3 py-1 rounded-full bg-white/[0.03] border border-white/[0.05]">
+<span class="text-silver-dark">//</span>
+<span class="text-silver">ABOUT</span>
+</div>
+</div>
+</header>
+<!-- Main Single-Viewport Editorial Content -->
+<main class="relative z-10 w-full max-w-5xl mx-auto px-6 sm:px-10 flex-grow flex flex-col justify-center my-auto py-8 sm:py-10" style="padding-bottom:6rem;">
+<div class="max-w-3xl">
+<!-- Eyebrow Label -->
+<div class="flex items-center space-x-2.5 text-xs font-mono tracking-widest text-silver-dark mb-6">
+<span class="w-1.5 h-1.5 rounded-full bg-crimson inline-block"></span>
+<span class="text-crimson font-medium">ABOUT // 001</span>
+<span class="">—</span>
+<span class="text-silver-muted uppercase">PERSONAL / FANZ</span>
+</div>
+<!-- Hero Heading -->
+<h1 class="font-mono text-4xl sm:text-5xl md:text-6xl text-white font-normal tracking-tight leading-[1.12] mb-6">
+        Curious by nature. <br class="hidden sm:inline">
+<span class="italic font-light text-silver hover:text-white transition-colors">Built by practice</span><span class="text-crimson">.</span>
+</h1>
+<!-- Short Paragraph -->
+<p class="text-silver-muted text-base sm:text-lg leading-relaxed font-light max-w-2xl mb-8">
+        I explore cybersecurity, Linux infrastructure, and self-hosted systems by building, experimenting, and learning hands-on.
+      </p>
+<!-- Three Compact Interests: Understated Minimalist Typographic List -->
+<div class="flex flex-wrap items-center gap-2.5 sm:gap-3 text-xs font-mono text-silver mb-12 sm:mb-14">
+<span class="text-[11px] tracking-wider uppercase text-silver-dark mr-1">FOCUS //</span>
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-white/[0.03] border border-white/[0.07] text-silver/90 hover:border-crimson/30 transition-colors">
+<span class="text-crimson text-xs mr-1.5">#</span>Cybersecurity
+        </span>
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-white/[0.03] border border-white/[0.07] text-silver/90 hover:border-crimson/30 transition-colors">
+<span class="text-crimson text-xs mr-1.5">#</span>Homelab
+        </span>
+<span class="inline-flex items-center px-3 py-1 rounded-full bg-white/[0.03] border border-white/[0.07] text-silver/90 hover:border-crimson/30 transition-colors">
+<span class="text-crimson text-xs mr-1.5">#</span>Automation
+        </span>
+</div>
+<!-- Contact / Connect Section -->
+<div class="pt-8 border-t border-white/[0.06] flex flex-col sm:flex-row sm:items-center justify-between gap-5 max-w-2xl">
+<div>
+<span class="font-mono text-[11px] tracking-wider uppercase text-silver-dark block mb-1">REACH OUT</span>
+<h2 class="font-mono text-xl sm:text-2xl text-white font-normal">
+            Let's connect<span class="text-crimson">.</span>
+</h2>
+</div>
+<div class="flex items-center gap-3 font-mono text-xs">
+<!-- GitHub Action Link -->
+<a class="liquid-glass-action px-4 py-2 rounded-xl text-silver hover:text-white flex items-center space-x-2" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<svg class="w-3.5 h-3.5 fill-current opacity-70" viewBox="0 0 24 24">
+<path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path>
+</svg>
+<span class="">GITHUB</span>
+<span class="text-silver-dark text-[11px]">↗</span>
+</a>
+<!-- Email Action Link -->
+<a class="liquid-glass-action px-4 py-2 rounded-xl text-silver hover:text-white flex items-center space-x-2" href="mailto:fanz@example.com">
+<svg class="w-3.5 h-3.5 stroke-current opacity-70 fill-none" stroke-width="1.8" viewBox="0 0 24 24">
+<path d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+<span class="">EMAIL</span>
+<span class="text-silver-dark text-[11px]">↗</span>
+</a>
+</div>
+</div>
+</div>
+</main>
+<div class="fixed bottom-6 inset-x-0 z-50 flex justify-center pointer-events-none px-4">
+<nav class="pointer-events-auto glass-dock rounded-full p-1.5 flex items-center gap-1 sm:gap-1.5"><a class="flex items-center gap-2 px-3 sm:px-3.5 py-2 rounded-full text-[#C5C6CA] hover:text-white hover:bg-white/[0.08] transition-all duration-200 font-mono-code text-xs uppercase tracking-wider group" href="/"><span class="material-symbols-outlined text-[16px] text-[#C5C6CA] group-hover:text-white transition-colors">home</span><span>Home</span></a>
+<div class="w-px h-4 bg-white/[0.12] mx-0.5"></div>
+<a class="flex items-center gap-2 px-3 sm:px-3.5 py-2 rounded-full text-[#C5C6CA] hover:text-white hover:bg-white/[0.08] transition-all duration-200 font-mono-code text-xs uppercase tracking-wider group" href="/projects"><span class="material-symbols-outlined text-[16px] text-[#C5C6CA] group-hover:text-white transition-colors">grid_view</span><span>Projects</span></a>
+<div class="w-px h-4 bg-white/[0.12] mx-0.5"></div>
+<a class="flex items-center gap-2 px-3 sm:px-3.5 py-2 rounded-full text-[#C5C6CA] hover:text-white hover:bg-white/[0.08] transition-all duration-200 font-mono-code text-xs uppercase tracking-wider group" href="/about"><span class="material-symbols-outlined text-[16px] text-[#C5C6CA] group-hover:text-white transition-colors">terminal</span><span>Skills</span></a>
+<div class="w-px h-4 bg-white/[0.12] mx-0.5"></div>
+<a class="flex items-center gap-2 px-3 sm:px-3.5 py-2 rounded-full text-[#C5C6CA] hover:text-white hover:bg-white/[0.08] transition-all duration-200 font-mono-code text-xs uppercase tracking-wider group" href="/certificates"><span class="material-symbols-outlined text-[16px] text-[#C5C6CA] group-hover:text-white transition-colors">verified</span><span>Certificates</span></a>
+<div class="w-px h-4 bg-white/[0.12] mx-0.5"></div>
+<a aria-current="page" class="flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-full bg-white/[0.12] border border-white/[0.18] shadow-[inset_0_1px_1px_rgba(255,255,255,0.3)] text-white font-mono-code text-xs uppercase tracking-wider font-medium transition-all duration-200" href="/contact"><span class="material-symbols-outlined text-[16px] text-white">person</span><span>About</span><span class="w-1.5 h-1.5 rounded-full bg-[var(--accent)] shadow-[0_0_8px_var(--accent)] ml-0.5"></span></a></nav>
+</div>
+<!-- Minimal Archival Footer -->
+<footer class="relative z-10 w-full max-w-6xl mx-auto px-6 sm:px-10 pb-5 pt-2 flex flex-col sm:flex-row items-center justify-between text-[11px] font-mono text-silver-dark gap-2 shrink-0">
+<div>
+<span class="">© 2026 Fanz</span>
+<span class="mx-2">•</span>
+<span class="">Personal Engineering &amp; Security Journal</span>
+</div>
+<div class="hidden sm:flex items-center space-x-3 text-silver-dark">
+<span class="">Obsidian Liquid Glass</span>
+<span class="">//</span>
+<span class="text-silver-muted">Single Scope</span>
+</div>
+</footer>
+
+
+</body></html>

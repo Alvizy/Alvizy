@@ -1,0 +1,21 @@
+# Config dengan credentials — JANGAN di-commit
+config.json
+
+# Binary compiled
+fanz-portfolio
+fanz-portfolio-new
+fanz-new*
+
+# Graphify generated
+graphify-out/
+
+# Design system generated (optional, uncomment kalau mau exclude)
+# design-system/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/

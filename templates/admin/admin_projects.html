@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin — Projects</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="admin-nav">
+  <span style="color:var(--cyan);font-weight:700">Admin</span>
+  <a href="{{.AdminPath}}">Dashboard</a>
+  <a href="{{.AdminPath}}/bio">Bio</a>
+  <a href="{{.AdminPath}}/skills">Skills</a>
+  <a href="{{.AdminPath}}/projects">Projects</a>
+  <a href="/" target="_blank">↗ Lihat Web</a>
+  <span class="logout">
+    <form method="POST" action="{{.AdminPath}}/logout">
+      <button type="submit">Logout</button>
+    </form>
+  </span>
+</div>
+<div class="admin-wrap">
+  <p class="admin-title">Projects</p>
+  <p style="margin-bottom:1.5rem"><a href="{{.AdminPath}}/projects/new" class="btn">+ Project Baru</a></p>
+
+  {{if .Projects}}
+  <table>
+    <thead>
+      <tr><th>Judul</th><th>Tech</th><th>Featured</th><th></th></tr>
+    </thead>
+    <tbody>
+      {{range .Projects}}
+      <tr>
+        <td>{{.Title}}</td>
+        <td style="color:var(--muted);font-size:0.75rem">{{.TechStack}}</td>
+        <td>{{if .Featured}}<span style="color:var(--cyan)">★</span>{{end}}</td>
+        <td style="white-space:nowrap">
+          <a href="{{$.AdminPath}}/projects/edit/{{.ID}}" style="font-size:0.75rem">Edit</a>
+          &nbsp;
+          <form method="POST" action="{{$.AdminPath}}/projects/delete/{{.ID}}" style="display:inline">
+            <button type="submit" class="btn-danger">Hapus</button>
+          </form>
+        </td>
+      </tr>
+      {{end}}
+    </tbody>
+  </table>
+  {{else}}
+  <p style="color:var(--muted)">Belum ada project.</p>
+  {{end}}
+</div>
+</body>
+</html>

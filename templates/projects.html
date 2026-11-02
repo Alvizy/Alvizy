@@ -1,0 +1,392 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="web_standard" name="shell-type">
+<title>Fanz — Selected Works</title>
+<!-- Typography Preconnects & Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+
+
+
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: #06080B;
+        color: #F5F5F7;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      }
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    .font-mono {
+      font-family: var(--font-mono), Georgia, serif;
+    }
+    .font-mono-code {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Ambient Crimson Volumetric Glows */
+    .crimson-ambient-glow {
+      background: radial-gradient(circle at 50% 40%, rgba(142, 24, 39, 0.35) 0%, rgba(80, 10, 18, 0.2) 45%, rgba(6, 8, 11, 0) 75%);
+    }
+    .ambient-crimson-core {
+      background: radial-gradient(ellipse at 50% 50%, rgba(223, 48, 72, 0.18) 0%, rgba(142, 24, 39, 0.25) 40%, rgba(6, 8, 11, 0) 75%);
+    }
+
+    /* Refined Liquid Glass Surfaces */
+    .glass-hero {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(20, 24, 32, 0.55) 30%, rgba(10, 12, 16, 0.8) 100%);
+      backdrop-filter: blur(28px);
+      -webkit-backdrop-filter: blur(28px);
+      border-top: 1px solid rgba(255, 255, 255, 0.20);
+      border-left: 1px solid rgba(255, 255, 255, 0.09);
+      border-right: 1px solid rgba(255, 255, 255, 0.07);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      box-shadow: 
+        inset 0 1px 1px 0 rgba(255, 255, 255, 0.22),
+        inset 0 20px 40px -20px rgba(255, 255, 255, 0.04),
+        0 30px 60px -15px rgba(0, 0, 0, 0.85),
+        0 0 60px -25px rgba(142, 24, 39, 0.3);
+    }
+
+    .card {
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(18, 21, 28, 0.6) 35%, rgba(10, 12, 16, 0.82) 100%);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border-top: 1px solid rgba(255, 255, 255, 0.18);
+      border-left: 1px solid rgba(255, 255, 255, 0.08);
+      border-right: 1px solid rgba(255, 255, 255, 0.06);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+      box-shadow: 
+        inset 0 1px 1px 0 rgba(255, 255, 255, 0.18),
+        0 20px 45px -12px rgba(0, 0, 0, 0.75),
+        0 0 35px -20px rgba(142, 24, 39, 0.25);
+    }
+
+    /* Optical Glass Dock Capsule */
+    .glass-dock {
+      background: linear-gradient(180deg, rgba(25, 28, 36, 0.8) 0%, rgba(11, 13, 17, 0.92) 100%);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border-top: 1px solid rgba(255, 255, 255, 0.30);
+      border-left: 1px solid rgba(255, 255, 255, 0.15);
+      border-right: 1px solid rgba(255, 255, 255, 0.15);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+      box-shadow: 
+        inset 0 1px 2px rgba(255, 255, 255, 0.35),
+        0 14px 40px -6px rgba(0, 0, 0, 0.75),
+        0 0 25px rgba(223, 48, 72, 0.25);
+    }
+
+    /* Glass Action Buttons & Badges */
+    .pill {
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-top: 1px solid rgba(255, 255, 255, 0.22);
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.12);
+    }
+
+    .liquid-button-cta {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.03) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-top: 1px solid rgba(255, 255, 255, 0.38);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      box-shadow: 
+        0 10px 28px -4px rgba(0, 0, 0, 0.65),
+        0 0 22px -2px rgba(223, 48, 72, 0.2),
+        inset 0 1px 1px 0 rgba(255, 255, 255, 0.30);
+    }
+    .liquid-button-cta:hover {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.18) 0%, rgba(223, 48, 72, 0.12) 100%);
+      border-color: rgba(223, 48, 72, 0.45);
+      border-top-color: rgba(255, 255, 255, 0.55);
+      box-shadow: 
+        0 14px 34px -4px rgba(0, 0, 0, 0.8),
+        0 0 32px -2px rgba(223, 48, 72, 0.38),
+        inset 0 1px 1px 0 rgba(255, 255, 255, 0.45);
+    }
+
+    /* Subtler inner glass display block */
+    .diagram-glass-display {
+      background: linear-gradient(180deg, rgba(14, 17, 23, 0.75) 0%, rgba(7, 9, 13, 0.95) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-top: 1px solid rgba(255, 255, 255, 0.14);
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.08);
+    }
+  </style>
+</head>
+<body class="bg-[#06080B] text-[#F5F5F7] antialiased selection:bg-[var(--accent)]/30 selection:text-white min-h-screen relative flex flex-col justify-between">
+<!-- Atmospheric Volumetric Obsidian & Crimson Underlay -->
+<div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+<div class="absolute -top-32 right-1/4 w-[760px] h-[640px] crimson-ambient-glow blur-3xl opacity-75"></div>
+<div class="absolute top-[48rem] -left-20 w-[580px] h-[580px] ambient-crimson-core blur-3xl opacity-60"></div>
+<div class="absolute bottom-10 right-10 w-[520px] h-[520px] bg-gradient-to-br from-[rgba(223,48,72,0.3)]/15 to-transparent rounded-full blur-3xl opacity-50"></div>
+</div>
+<!-- Minimalist Top Header (matching Overview Screen) -->
+<header class="relative z-30 w-full shrink-0">
+<div class="max-w-6xl mx-auto h-16 lg:h-20 px-6 sm:px-8 flex items-center justify-between">
+<!-- Brand Mark -->
+<a class="brand" href="/">
+<span class="font-mono text-2xl lg:text-3xl font-normal tracking-tight text-[#F5F5F7] group-hover:text-white transition-colors">Fanz</span>
+</a>
+<!-- Location & Status Indicator -->
+<div class="flex items-center gap-2.5 px-3.5 py-1.5 rounded-full pill text-[#D9D9DE] font-mono-code text-[11px] tracking-widest uppercase">
+<span class="relative flex h-1.5 w-1.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--accent)] opacity-75"></span>
+<span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-[var(--accent)] shadow-[0_0_8px_var(--accent)]"></span>
+</span>
+<span class="">INDONESIA · UTC+7</span>
+</div>
+</div>
+</header>
+<!-- Main Content Container -->
+<main class="relative z-20 flex-1 w-full max-w-6xl mx-auto px-5 sm:px-8 pt-4 pb-32" style="padding-bottom:6rem;">
+<!-- Page Header -->
+<section class="flex flex-col items-start gap-4 mb-12 lg:mb-16">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full pill">
+<span class="w-1.5 h-1.5 rounded-full bg-[var(--accent)] shadow-[0_0_8px_var(--accent)]"></span>
+<span class="font-mono-code text-[11px] text-[#D9D9DE] font-medium tracking-[0.2em] uppercase">PORTFOLIO · ARCHITECTURE &amp; CODE</span>
+</div>
+<div>
+<h1 class="font-mono text-5xl sm:text-6xl lg:text-[68px] font-normal text-[#F5F5F7] tracking-tight leading-[1.08]">
+          Selected <span class="italic font-light text-white">Works.</span>
+</h1>
+<p class="font-mono text-xl sm:text-2xl text-[#C4C7CC] italic font-light tracking-wide mt-2">
+          Infrastructure. Development. Security.
+        </p>
+</div>
+</section>
+<!-- Projects Stack -->
+<div class="flex flex-col gap-10 lg:gap-14">
+<!-- PROJECT 1 (Featured Card): Virtualization & Network Lab -->
+<article class="glass-hero rounded-3xl relative overflow-hidden p-6 sm:p-10 lg:p-12 transition-all duration-300">
+<!-- Top specular micro-line -->
+<div class="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent pointer-events-none"></div>
+<div class="flex flex-col gap-6 lg:gap-8">
+<!-- Card Header & Badge -->
+<div class="flex flex-wrap items-center justify-between gap-4">
+<span class="font-mono-code text-[11px] text-[var(--accent)] font-medium tracking-[0.22em] uppercase">
+              01 // INFRASTRUCTURE · PERSONAL LAB
+            </span>
+<div class="flex items-center gap-2 px-3 py-1 rounded-full pill text-[#9CA3AF] font-mono-code text-[10px] tracking-wider uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-[var(--accent)]"></span>
+<span class="">Personal Environment</span>
+</div>
+</div>
+<!-- Title and Description -->
+<div class="max-w-3xl">
+<h2 class="font-mono text-3xl sm:text-4xl lg:text-5xl font-normal text-[#F5F5F7] tracking-tight leading-tight">
+              Virtualization &amp; Network <span class="italic font-light text-white">Lab</span>
+</h2>
+<p class="text-base sm:text-lg text-[#C4C7CC] font-light leading-relaxed mt-3">
+              Exploring virtualization, network infrastructure, and server monitoring through hands-on experimentation in a personal homelab.
+            </p>
+</div>
+<!-- Technologies Pill Tags -->
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-3.5 py-1.5 rounded-full pill font-mono-code text-[11px] text-[#E2E8F0] tracking-wider uppercase">Proxmox VE</span>
+<span class="px-3.5 py-1.5 rounded-full pill font-mono-code text-[11px] text-[#E2E8F0] tracking-wider uppercase">MikroTik CHR</span>
+<span class="px-3.5 py-1.5 rounded-full pill font-mono-code text-[11px] text-[#E2E8F0] tracking-wider uppercase">Linux</span>
+<span class="px-3.5 py-1.5 rounded-full pill font-mono-code text-[11px] text-[var(--accent)] tracking-wider uppercase">Server Monitoring</span>
+</div>
+<!-- Clean Neutral Topology Illustration Diagram Placeholder -->
+<div class="diagram-glass-display rounded-2xl p-6 sm:p-8 flex flex-col items-center justify-center relative overflow-hidden">
+<!-- Subtle Grid Accent -->
+<div class="w-full max-w-xl flex flex-col items-center gap-4 py-4 text-center">
+<div class="w-12 h-12 rounded-full bg-white/[0.04] border border-white/[0.1] flex items-center justify-center text-[var(--accent)] mb-1">
+<span class="material-symbols-outlined text-[24px]">hub</span>
+</div>
+<h3 class="font-mono text-xl sm:text-2xl font-normal text-[#F5F5F7]">Lab Topology Illustration</h3>
+<p class="text-xs sm:text-sm text-[#9CA3AF] max-w-md leading-relaxed font-mono-code">
+                [ Neutral, sanitized diagram schematic ]<br>
+                Host hardware hypervisor layer connecting virtual routing instances and lightweight Linux service nodes.
+              </p>
+<!-- Honest Minimal Flow Schema -->
+<div class="w-full max-w-lg grid grid-cols-1 sm:grid-cols-3 gap-3 pt-4 text-left font-mono-code text-[11px]">
+<div class="p-3 rounded-xl bg-white/[0.03] border border-white/[0.08] flex flex-col gap-1">
+<span class="text-[#9CA3AF] text-[9px] uppercase tracking-wider">Host</span>
+<span class="text-[#F5F5F7] font-medium">Proxmox VE</span>
+<span class="text-[#6B7280] text-[10px]">Hypervisor base</span>
+</div>
+<div class="p-3 rounded-xl bg-white/[0.03] border border-white/[0.08] flex flex-col gap-1">
+<span class="text-[#9CA3AF] text-[9px] uppercase tracking-wider">Routing</span>
+<span class="text-[#F5F5F7] font-medium">MikroTik CHR</span>
+<span class="text-[#6B7280] text-[10px]">Virtual gateway test</span>
+</div>
+<div class="p-3 rounded-xl bg-white/[0.03] border border-white/[0.08] flex flex-col gap-1">
+<span class="text-[#9CA3AF] text-[9px] uppercase tracking-wider">Services</span>
+<span class="text-[#F5F5F7] font-medium">Linux Containers</span>
+<span class="text-[#6B7280] text-[10px]">Self-hosted tooling</span>
+</div>
+</div>
+<div class="pt-2 text-[10px] text-[#6B7280] font-mono-code tracking-wider uppercase">
+                Sanitized schematic · Documentation to be added
+              </div>
+</div>
+</div>
+<!-- Interactive Detail Drawer (Disclosure) -->
+<details class="group rounded-2xl bg-white/[0.02] border border-white/[0.08] p-5 sm:p-6 transition-all duration-300">
+<summary class="flex items-center justify-between cursor-pointer list-none select-none">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[18px] text-[var(--accent)]">info</span>
+<span class="font-mono-code text-xs sm:text-sm text-[#E2E8F0] tracking-wider uppercase font-medium">
+                  Honest Scope &amp; Lab Notes
+                </span>
+</div>
+<span class="material-symbols-outlined text-[20px] text-[#9CA3AF] group-open:rotate-180 transition-transform duration-200">
+                keyboard_arrow_down
+              </span>
+</summary>
+<div class="pt-4 text-xs sm:text-sm text-[#C4C7CC] font-light leading-relaxed border-t border-white/[0.06] mt-4 space-y-3">
+<p class="">
+<strong class="text-white font-medium">Personal Proxmox Homelab:</strong> Runs on a dedicated standalone machine utilized exclusively for testing hypervisor snapshots, testing guest migration, and exploring resource isolation.
+              </p>
+<p class="">
+<strong class="text-white font-medium">MikroTik CHR Routing:</strong> Implemented purely as a learning environment router within an internal hypervisor bridge to experiment with basic firewall rules, NAT, and route tables.
+              </p>
+<p class="">
+<strong class="text-white font-medium">Assisted External Monitoring:</strong> Hands-on experience helping verify storage capacity, snapshot cleanup, and basic service health on independent peer Proxmox nodes.
+              </p>
+</div>
+</details>
+</div>
+</article>
+<!-- 2-COLUMN GRID: Project 2 & Project 3 -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+<!-- PROJECT 2: Aevo CTF -->
+<article class="card rounded-3xl relative overflow-hidden p-6 sm:p-8 flex flex-col justify-between transition-all duration-300">
+<div class="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-white/25 to-transparent pointer-events-none"></div>
+<div class="flex flex-col gap-5">
+<div class="flex items-center justify-between gap-3">
+<span class="font-mono-code text-[11px] text-[var(--accent)] font-medium tracking-[0.2em] uppercase">
+                02 // SECURITY · COMPETITION
+              </span>
+</div>
+<div>
+<h2 class="font-mono text-2xl sm:text-3xl font-normal text-[#F5F5F7] tracking-tight">
+                Aevo <span class="italic font-light text-white">CTF</span>
+</h2>
+<p class="text-sm sm:text-base text-[#C4C7CC] font-light leading-relaxed mt-2.5">
+                CTFd platform deployment, custom challenge configuration, and tailored scoring integrations for cyber security practice.
+              </p>
+</div>
+<!-- Tech Pills -->
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-3 py-1 rounded-full pill font-mono-code text-[10px] text-[#E2E8F0] tracking-wider uppercase">CTFd</span>
+<span class="px-3 py-1 rounded-full pill font-mono-code text-[10px] text-[#E2E8F0] tracking-wider uppercase">Docker</span>
+<span class="px-3 py-1 rounded-full pill font-mono-code text-[10px] text-[#E2E8F0] tracking-wider uppercase">Python</span>
+<span class="px-3 py-1 rounded-full pill font-mono-code text-[10px] text-[#E2E8F0] tracking-wider uppercase">Linux</span>
+</div>
+<!-- Visual Graphic Placeholder -->
+<div class="diagram-glass-display rounded-xl min-h-[170px] p-5 flex flex-col items-center justify-center text-center gap-2">
+<div class="w-10 h-10 rounded-full bg-white/[0.04] border border-white/[0.1] flex items-center justify-center text-[var(--accent)]">
+<span class="material-symbols-outlined text-[20px]">flag</span>
+</div>
+<span class="font-mono-code text-xs text-[#E2E8F0] font-medium tracking-wide">Competition Platform Mockup</span>
+<span class="text-[10px] text-[#6B7280] font-mono-code uppercase tracking-wider">Documentation to be added</span>
+</div>
+</div>
+<!-- Bottom Action -->
+<div class="pt-6 mt-6 border-t border-white/[0.06] flex items-center justify-between">
+<span class="text-[11px] text-[#8F9194] font-mono-code uppercase tracking-wider">Completed Event Setup</span>
+<a class="inline-flex items-center gap-1.5 text-xs text-[#F5F5F7] font-mono-code uppercase tracking-wider hover:text-white group" href="#">
+<span class="">View Details</span>
+<span class="material-symbols-outlined text-[15px] text-[var(--accent)] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- PROJECT 3: COMET Chat -->
+<article class="card rounded-3xl relative overflow-hidden p-6 sm:p-8 flex flex-col justify-between transition-all duration-300">
+<div class="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-white/25 to-transparent pointer-events-none"></div>
+<div class="flex flex-col gap-5">
+<div class="flex items-center justify-between gap-3">
+<span class="font-mono-code text-[11px] text-[var(--accent)] font-medium tracking-[0.2em] uppercase">
+                03 // DEVELOPMENT · IN PROGRESS
+              </span>
+<span class="px-2.5 py-0.5 rounded-full bg-[var(--accent)]/15 border border-[var(--accent)]/30 font-mono-code text-[10px] text-[var(--accent)] font-medium tracking-wider uppercase">
+                In Active Development
+              </span>
+</div>
+<div>
+<h2 class="font-mono text-2xl sm:text-3xl font-normal text-[#F5F5F7] tracking-tight">
+                COMET <span class="italic font-light text-white">Chat</span>
+</h2>
+<p class="text-sm sm:text-base text-[#C4C7CC] font-light leading-relaxed mt-2.5">
+                A modern real-time messaging application focused on clean concurrency, lightweight state management, and minimal latency.
+              </p>
+</div>
+<!-- Tech Pills -->
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-3 py-1 rounded-full pill font-mono-code text-[10px] text-[#E2E8F0] tracking-wider uppercase">Go (Golang)</span>
+<span class="px-3 py-1 rounded-full pill font-mono-code text-[10px] text-[#E2E8F0] tracking-wider uppercase">WebSocket</span>
+<span class="px-3 py-1 rounded-full pill font-mono-code text-[10px] text-[#E2E8F0] tracking-wider uppercase">PostgreSQL</span>
+<span class="px-3 py-1 rounded-full pill font-mono-code text-[10px] text-[#E2E8F0] tracking-wider uppercase">Tailwind</span>
+</div>
+<!-- Visual Graphic Placeholder -->
+<div class="diagram-glass-display rounded-xl min-h-[170px] p-5 flex flex-col items-center justify-center text-center gap-2">
+<div class="w-10 h-10 rounded-full bg-white/[0.04] border border-white/[0.1] flex items-center justify-center text-[var(--accent)]">
+<span class="material-symbols-outlined text-[20px]">forum</span>
+</div>
+<span class="font-mono-code text-xs text-[#E2E8F0] font-medium tracking-wide">Developmental Interface Preview</span>
+<span class="text-[10px] text-[#6B7280] font-mono-code uppercase tracking-wider">Documentation to be added</span>
+</div>
+</div>
+<!-- Bottom Action -->
+<div class="pt-6 mt-6 border-t border-white/[0.06] flex items-center justify-between">
+<span class="text-[11px] text-[#8F9194] font-mono-code uppercase tracking-wider">Source Repo (Private)</span>
+<span class="inline-flex items-center gap-1.5 text-xs text-[#C4C7CC] font-mono-code uppercase tracking-wider">
+<span class="">Preview Soon</span>
+<span class="material-symbols-outlined text-[15px] text-[#6B7280]">pending</span>
+</span>
+</div>
+</article>
+</div>
+</div>
+</main>
+<!-- Ultra-Authentic Floating Liquid Glass Navigation Dock -->
+<div class="fixed bottom-6 inset-x-0 z-50 flex justify-center pointer-events-none px-4">
+<nav class="pointer-events-auto glass-dock rounded-full p-1.5 flex items-center gap-1 sm:gap-1.5 transition-all duration-300"><a class="flex items-center gap-2 px-3 sm:px-3.5 py-2 rounded-full text-[#C5C6CA] hover:text-white hover:bg-white/[0.08] transition-all duration-200 font-mono-code text-xs uppercase tracking-wider group" href="/">
+  <span class="material-symbols-outlined text-[16px] text-[#C5C6CA] group-hover:text-white transition-colors">home</span>
+  <span class="">Home</span>
+</a>
+<div class="w-px h-4 bg-white/[0.12] mx-0.5"></div>
+<a aria-current="page" class="flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-full bg-white/[0.12] border border-white/[0.18] shadow-[inset_0_1px_1px_rgba(255,255,255,0.3)] text-white font-mono-code text-xs uppercase tracking-wider font-medium transition-all duration-200" href="/projects">
+  <span class="material-symbols-outlined text-[16px] text-white">grid_view</span>
+  <span class="">Projects</span>
+  <span class="w-1.5 h-1.5 rounded-full bg-[var(--accent)] shadow-[0_0_8px_var(--accent)] ml-0.5"></span>
+</a>
+<div class="w-px h-4 bg-white/[0.12] mx-0.5"></div>
+<a class="flex items-center gap-2 px-3 sm:px-3.5 py-2 rounded-full text-[#C5C6CA] hover:text-white hover:bg-white/[0.08] transition-all duration-200 font-mono-code text-xs uppercase tracking-wider group" href="/about">
+  <span class="material-symbols-outlined text-[16px] text-[#C5C6CA] group-hover:text-white transition-colors">terminal</span>
+  <span class="">Skills</span>
+</a>
+<div class="w-px h-4 bg-white/[0.12] mx-0.5"></div>
+<a class="flex items-center gap-2 px-3 sm:px-3.5 py-2 rounded-full text-[#C5C6CA] hover:text-white hover:bg-white/[0.08] transition-all duration-200 font-mono-code text-xs uppercase tracking-wider group" href="/certificates">
+  <span class="material-symbols-outlined text-[16px] text-[#C5C6CA] group-hover:text-white transition-colors">verified</span>
+  <span class="">Certificates</span>
+</a>
+<div class="w-px h-4 bg-white/[0.12] mx-0.5"></div>
+<a class="flex items-center gap-2 px-3 sm:px-3.5 py-2 rounded-full text-[#C5C6CA] hover:text-white hover:bg-white/[0.08] transition-all duration-200 font-mono-code text-xs uppercase tracking-wider group" href="/contact">
+  <span class="material-symbols-outlined text-[16px] text-[#C5C6CA] group-hover:text-white transition-colors">person</span>
+  <span class="">About</span>
+</a></nav>
+</div>
+<!-- Minimalist Micro Footer -->
+<footer class="relative z-20 w-full shrink-0 mt-8 mb-4">
+<div class="max-w-6xl mx-auto h-10 px-6 sm:px-8 flex items-center justify-between text-[#8F9194] font-mono-code text-[11px] uppercase tracking-widest">
+<span class="">© 2026 Fanz</span>
+<span class="hidden sm:inline text-[10px] tracking-wider text-[#8F9194]/60">ALL RIGHTS RESERVED</span>
+</div>
+</footer>
+
+
+</body></html>

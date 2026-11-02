@@ -1,0 +1,554 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="web_standard" name="shell-type">
+<title>Fanz — Records &amp; Certificates Archive</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+
+
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: #080a0e;
+        color: #e2e2e6;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+      }
+      body {
+        overscroll-behavior: none;
+      }
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    .font-mono-hero {
+      font-family: var(--font-mono), serif;
+    }
+    .font-mono-code {
+      font-family: 'JetBrains Mono', monospace;
+    }
+  </style>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container": "#14171d",
+            "surface-container-high": "#1b1f26",
+            "surface-container-low": "#0d1015",
+            "surface-container-lowest": "#06080b",
+            "surface-variant": "#222731",
+            "background": "#080a0e",
+            "surface": "#0c0e13",
+            "primary": "#f1f3f7",
+            "on-surface": "#e2e2e6",
+            "on-surface-variant": "#9ca3af",
+            "outline": "#4b5563",
+            "outline-variant": "#262b35",
+            "crimson": {
+              DEFAULT: "var(--accent)",
+              dim: "rgba(223,48,72,0.3)",
+              deep: "#4e0b14",
+              glow: "rgba(223, 48, 72, 0.15)"
+            },
+            "secondary": "#f4a261",
+            "tertiary": "#68fcbf"
+          },
+          fontFamily: {
+            "label-code-md": ["JetBrains Mono", "monospace"],
+            "label-code-sm": ["JetBrains Mono", "monospace"],
+            "display-hero": ["Newsreader", "serif"],
+            "headline-lg": ["Newsreader", "serif"],
+            "headline-md": ["Newsreader", "serif"],
+            "headline-sm": ["Newsreader", "serif"],
+            "body-lg": ["Plus Jakarta Sans", "sans-serif"],
+            "body-md": ["Plus Jakarta Sans", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-[#080a0e] font-body-md text-on-surface antialiased min-h-screen relative selection:bg-crimson-dim selection:text-primary">
+<!-- Subtle Ambient Obsidian Atmosphere -->
+<div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+<div class="absolute -top-32 left-1/3 w-[620px] h-[380px] rounded-full bg-crimson-deep/20 blur-[150px]"></div>
+<div class="absolute top-[600px] -right-24 w-[480px] h-[340px] rounded-full bg-surface-container/60 blur-[140px]"></div>
+</div>
+<!-- Top Navigation Header -->
+<header class="fixed top-0 inset-x-0 z-40 bg-[#080a0e]/75 backdrop-blur-2xl border-b border-white/[0.05]">
+<div class="h-16 w-full max-w-6xl mx-auto px-6 flex items-center justify-between">
+<a class="font-display-hero text-2xl text-primary tracking-tight font-normal hover:text-white transition-colors" data-path="overview" href="#">Fanz</a>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-lowest/80 border border-white/[0.07] backdrop-blur-xl">
+<span class="relative flex h-2 w-2 items-center justify-center">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-crimson opacity-75"></span>
+<span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-crimson"></span>
+</span>
+<span class="font-mono-code text-[11px] text-on-surface-variant uppercase tracking-widest">INDONESIA • UTC+7</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container-high border border-white/10 flex items-center justify-center text-primary shadow-inner">
+<span class="material-symbols-outlined text-[17px]">terminal</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Layout -->
+<main class="relative z-10 w-full pt-24 pb-36 px-6">
+<div class="max-w-5xl mx-auto flex flex-col">
+<!-- 1. Editorial Opening -->
+<section class="pt-6 pb-12">
+<div class="flex items-center gap-2.5 mb-4">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-crimson"></span>
+<span class="font-mono-code text-[11px] tracking-[0.2em] uppercase text-on-surface-variant">
+            FIELD NOTES / SELECTED RECORDS
+          </span>
+</div>
+<h1 class="font-mono-hero text-4xl sm:text-5xl md:text-6xl text-primary font-normal tracking-tight leading-[1.12] max-w-3xl">
+          Learning leaves a <span class="italic text-crimson">trace.</span>
+</h1>
+<p class="mt-4 text-base md:text-lg text-on-surface-variant max-w-2xl font-light leading-relaxed">
+          A deliberate log of engineering systems, hands-on lab deployments, independent software, and verified milestones.
+        </p>
+<div class="mt-10 w-full border-t border-white/10"></div>
+</section>
+<!-- 2. One Featured Technical Project (Asymmetric Hero Feature) -->
+<section class="mb-16">
+<div class="rounded-2xl bg-surface-container-lowest/90 border border-white/10 p-6 md:p-8 backdrop-blur-xl shadow-2xl relative overflow-hidden group">
+<!-- Ambient internal gradient accent -->
+<div class="absolute -right-20 -top-20 w-80 h-80 bg-crimson-deep/20 rounded-full blur-3xl pointer-events-none group-hover:bg-crimson-deep/30 transition-all duration-700"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- Left Info Column -->
+<div class="lg:col-span-7 flex flex-col justify-between">
+<div>
+<div class="flex flex-wrap items-center gap-3 mb-4">
+<span class="font-mono-code text-[10px] tracking-widest uppercase px-2.5 py-1 rounded bg-crimson-deep/40 text-crimson border border-crimson/25">
+                    FEATURED INFRASTRUCTURE
+                  </span>
+<span class="font-mono-code text-[11px] text-tertiary flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+                    ACTIVE HOMELAB // DOCUMENTED
+                  </span>
+</div>
+<h2 class="font-mono-hero text-2xl sm:text-3xl text-primary font-normal tracking-tight mb-3">
+                  Virtualization &amp; Network Lab (Proxmox VE &amp; MikroTik CHR)
+                </h2>
+<p class="text-on-surface-variant text-sm sm:text-base font-normal leading-relaxed mb-6">
+                  Personal homelab exploration orchestrating a Proxmox VE hypervisor instance, LXC containerized utilities, and MikroTik Cloud Hosted Router (CHR) as an isolated routing testbed, alongside continuous node health and bandwidth monitoring.
+                </p>
+</div>
+<!-- Tags and Trigger -->
+<div>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="font-mono-code text-[11px] px-2.5 py-1 rounded-md bg-white/[0.04] text-neutral-300 border border-white/[0.07]">Proxmox VE</span>
+<span class="font-mono-code text-[11px] px-2.5 py-1 rounded-md bg-white/[0.04] text-neutral-300 border border-white/[0.07]">MikroTik CHR</span>
+<span class="font-mono-code text-[11px] px-2.5 py-1 rounded-md bg-white/[0.04] text-neutral-300 border border-white/[0.07]">Linux Kernel</span>
+<span class="font-mono-code text-[11px] px-2.5 py-1 rounded-md bg-white/[0.04] text-neutral-300 border border-white/[0.07]">Server Monitoring</span>
+</div>
+<button class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/[0.07] hover:bg-white/[0.12] text-primary border border-white/10 hover:border-white/25 font-mono-code text-xs uppercase tracking-wider transition-all duration-200" onclick="openRecordModal('homelab')" type="button">
+<span class="">Inspect Lab Record</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-0.5 transition-transform">arrow_outward</span>
+</button>
+</div>
+</div>
+<!-- Right Diagrammatic / Typographic View -->
+<div class="lg:col-span-5 w-full">
+<div class="w-full rounded-xl bg-[#0b0e14] border border-white/10 p-5 relative overflow-hidden font-mono-code text-xs shadow-inner">
+<div class="flex items-center justify-between pb-3 mb-3 border-b border-white/[0.07]">
+<span class="text-neutral-400 text-[11px] uppercase tracking-wider">TOPOLOGY // SPEC-01</span>
+<span class="text-crimson text-[11px]">CHR-ROUTED</span>
+</div>
+<!-- Structured Technical Topology Representation -->
+<div class="space-y-3 text-[11px] text-neutral-300">
+<div class="p-2.5 rounded bg-white/[0.02] border border-white/[0.04]">
+<div class="text-[10px] text-neutral-500 uppercase tracking-widest mb-1">Hypervisor Core</div>
+<div class="flex justify-between items-center text-primary font-medium">
+<span class="">Proxmox VE 8.x Cluster</span>
+<span class="text-tertiary">UP (14d)</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div class="p-2.5 rounded bg-white/[0.02] border border-white/[0.04]">
+<div class="text-[10px] text-neutral-500 uppercase tracking-widest mb-0.5">Router Layer</div>
+<div class="text-white">MikroTik CHR</div>
+<div class="text-[10px] text-neutral-500">v7.x L2/VLANs</div>
+</div>
+<div class="p-2.5 rounded bg-white/[0.02] border border-white/[0.04]">
+<div class="text-[10px] text-neutral-500 uppercase tracking-widest mb-0.5">Containers</div>
+<div class="text-white">LXC Micro-nodes</div>
+<div class="text-[10px] text-neutral-500">Debian Minimal</div>
+</div>
+</div>
+<div class="p-2.5 rounded bg-white/[0.02] border border-white/[0.04] flex items-center justify-between">
+<div>
+<div class="text-[10px] text-neutral-500 uppercase tracking-widest">Observability</div>
+<div class="text-neutral-200">System Telemetry &amp; Logs</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">query_stats</span>
+</div>
+</div>
+<div class="mt-3 pt-3 border-t border-white/[0.06] flex items-center justify-between text-[10px] text-neutral-500">
+<span class="">SEGMENT: LAB-192.168.88.0/24</span>
+<span class="text-neutral-400">ISOLATED VNET</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Compact Indexed Editorial Entries -->
+<section class="mb-20">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-2">
+<span class="font-mono-code text-[11px] tracking-widest uppercase text-on-surface-variant">INDEXED ENGINEERING &amp; SYSTEM NOTES</span>
+</div>
+<span class="font-mono-code text-xs text-neutral-500">04 RECORDS</span>
+</div>
+<div class="border-t border-white/10 flex flex-col divide-y divide-white/[0.07]">
+<!-- Entry 01: Aevo CTF Platform -->
+<article class="group py-5 px-3 -mx-3 rounded-lg hover:bg-white/[0.02] cursor-pointer transition-colors duration-200 flex flex-col md:flex-row md:items-center justify-between gap-4" onclick="openRecordModal('aevo')">
+<div class="flex items-start md:items-center gap-4 sm:gap-6">
+<span class="font-mono-code text-sm text-neutral-500 group-hover:text-crimson transition-colors pt-0.5 md:pt-0">01</span>
+<div>
+<div class="flex items-center gap-3">
+<h3 class="font-mono-hero text-xl md:text-2xl text-primary font-normal group-hover:text-white transition-colors">
+                    Aevo CTF Platform
+                  </h3>
+<span class="hidden sm:inline-block font-mono-code text-[10px] px-2 py-0.5 rounded bg-white/[0.04] text-neutral-400 border border-white/[0.05]">
+                    CYBER DRILLS
+                  </span>
+</div>
+<p class="text-xs sm:text-sm text-on-surface-variant mt-1 max-w-xl font-light">
+                  CTFd infrastructure deployment, challenge orchestration, and custom container routing configured for community practice exercises.
+                </p>
+</div>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-5 pl-10 md:pl-0">
+<span class="font-mono-code text-[10px] sm:text-[11px] uppercase tracking-wider px-2.5 py-1 rounded bg-white/[0.03] text-tertiary border border-white/[0.05]">
+                COMPLETED SETUP
+              </span>
+<span class="material-symbols-outlined text-outline text-[18px] group-hover:text-white group-hover:translate-x-1 transition-all">
+                arrow_forward
+              </span>
+</div>
+</article>
+<!-- Entry 02: COMET Chat System -->
+<article class="group py-5 px-3 -mx-3 rounded-lg hover:bg-white/[0.02] cursor-pointer transition-colors duration-200 flex flex-col md:flex-row md:items-center justify-between gap-4" onclick="openRecordModal('comet')">
+<div class="flex items-start md:items-center gap-4 sm:gap-6">
+<span class="font-mono-code text-sm text-neutral-500 group-hover:text-crimson transition-colors pt-0.5 md:pt-0">02</span>
+<div>
+<div class="flex items-center gap-3">
+<h3 class="font-mono-hero text-xl md:text-2xl text-primary font-normal group-hover:text-white transition-colors">
+                    COMET Chat Architecture
+                  </h3>
+<span class="hidden sm:inline-block font-mono-code text-[10px] px-2 py-0.5 rounded bg-white/[0.04] text-neutral-400 border border-white/[0.05]">
+                    SOFTWARE
+                  </span>
+</div>
+<p class="text-xs sm:text-sm text-on-surface-variant mt-1 max-w-xl font-light">
+                  Lightweight real-time messaging implementation experimenting with bi-directional WebSocket communication, channel broadcasting, and state synchronization.
+                </p>
+</div>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-5 pl-10 md:pl-0">
+<span class="font-mono-code text-[10px] sm:text-[11px] uppercase tracking-wider px-2.5 py-1 rounded bg-white/[0.03] text-secondary border border-white/[0.05]">
+                IN ACTIVE DEVELOPMENT
+              </span>
+<span class="material-symbols-outlined text-outline text-[18px] group-hover:text-white group-hover:translate-x-1 transition-all">
+                arrow_forward
+              </span>
+</div>
+</article>
+<!-- Entry 03: CTF Practice & Security Labs -->
+<article class="group py-5 px-3 -mx-3 rounded-lg hover:bg-white/[0.02] cursor-pointer transition-colors duration-200 flex flex-col md:flex-row md:items-center justify-between gap-4" onclick="openRecordModal('ctf')">
+<div class="flex items-start md:items-center gap-4 sm:gap-6">
+<span class="font-mono-code text-sm text-neutral-500 group-hover:text-crimson transition-colors pt-0.5 md:pt-0">03</span>
+<div>
+<div class="flex items-center gap-3">
+<h3 class="font-mono-hero text-xl md:text-2xl text-primary font-normal group-hover:text-white transition-colors">
+                    CTF Practice &amp; Security Labs
+                  </h3>
+<span class="hidden sm:inline-block font-mono-code text-[10px] px-2 py-0.5 rounded bg-white/[0.04] text-neutral-400 border border-white/[0.05]">
+                    SECURITY
+                  </span>
+</div>
+<p class="text-xs sm:text-sm text-on-surface-variant mt-1 max-w-xl font-light">
+                  Hands-on security exercises covering Linux permissions, web exploits (SQLi, broken authentication), and network protocol inspection drills.
+                </p>
+</div>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-5 pl-10 md:pl-0">
+<span class="font-mono-code text-[10px] sm:text-[11px] uppercase tracking-wider px-2.5 py-1 rounded bg-white/[0.03] text-neutral-300 border border-white/[0.05]">
+                ONGOING LABS
+              </span>
+<span class="material-symbols-outlined text-outline text-[18px] group-hover:text-white group-hover:translate-x-1 transition-all">
+                arrow_forward
+              </span>
+</div>
+</article>
+<!-- Entry 04: Go Systems & Concurrency Notes -->
+<article class="group py-5 px-3 -mx-3 rounded-lg hover:bg-white/[0.02] cursor-pointer transition-colors duration-200 flex flex-col md:flex-row md:items-center justify-between gap-4" onclick="openRecordModal('golang')">
+<div class="flex items-start md:items-center gap-4 sm:gap-6">
+<span class="font-mono-code text-sm text-neutral-500 group-hover:text-crimson transition-colors pt-0.5 md:pt-0">04</span>
+<div>
+<div class="flex items-center gap-3">
+<h3 class="font-mono-hero text-xl md:text-2xl text-primary font-normal group-hover:text-white transition-colors">
+                    Go Systems &amp; Concurrency Notes
+                  </h3>
+<span class="hidden sm:inline-block font-mono-code text-[10px] px-2 py-0.5 rounded bg-white/[0.04] text-neutral-400 border border-white/[0.05]">
+                    STUDY LOG
+                  </span>
+</div>
+<p class="text-xs sm:text-sm text-on-surface-variant mt-1 max-w-xl font-light">
+                  Deep-dive code examples investigating goroutine management, channel synchronization, context cancellation, and benchmarked memory pooling.
+                </p>
+</div>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-5 pl-10 md:pl-0">
+<span class="font-mono-code text-[10px] sm:text-[11px] uppercase tracking-wider px-2.5 py-1 rounded bg-white/[0.03] text-tertiary border border-white/[0.05]">
+                ACTIVE STUDY
+              </span>
+<span class="material-symbols-outlined text-outline text-[18px] group-hover:text-white group-hover:translate-x-1 transition-all">
+                arrow_forward
+              </span>
+</div>
+</article>
+</div>
+</section>
+<!-- 4. Restrained Certificates & Credentials Archive -->
+<section class="mb-12">
+<div class="flex items-center gap-2 mb-3">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-neutral-600"></span>
+<h2 class="font-mono-code text-[11px] tracking-widest uppercase text-on-surface-variant">
+            CERTIFICATES &amp; EXAMINATIONS ARCHIVE
+          </h2>
+</div>
+<p class="text-xs sm:text-sm text-neutral-400 mb-6 font-light max-w-xl">
+          An honest, uninflated index of formal standardized exams and external accreditations.
+        </p>
+<!-- Minimal timeline / credential row -->
+<div class="rounded-xl border border-white/10 bg-surface-container-lowest/70 backdrop-blur-md p-5 sm:p-6 mb-5">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-crimson text-[22px] mt-0.5">history_edu</span>
+<div>
+<div class="flex items-center gap-3">
+<h3 class="font-mono-hero text-lg sm:text-xl text-primary font-normal">
+                    TOEIC Listening &amp; Reading
+                  </h3>
+<span class="font-mono-code text-[10px] uppercase px-2 py-0.5 rounded bg-crimson-deep/30 text-crimson border border-crimson/20">
+                    TARGET 2026 // IN PROGRESS
+                  </span>
+</div>
+<p class="text-xs sm:text-sm text-neutral-400 mt-1 max-w-2xl font-light">
+                  Planned international English communication exam preparation. Current phase focuses on routine listening drills, technical vocabulary acquisition, and timed reading comprehension test batteries.
+                </p>
+</div>
+</div>
+<div class="font-mono-code text-xs text-neutral-500 pl-9 md:pl-0 shrink-0">
+<span class="">ETS • PLANNED 2026</span>
+</div>
+</div>
+</div>
+<!-- Understated Notice -->
+<div class="py-4 px-5 rounded-lg border border-dashed border-white/10 bg-white/[0.01] flex items-center justify-between text-xs text-neutral-400 font-mono-code">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-neutral-500">info</span>
+            Official credential documentation is indexed upon examination completion.
+          </span>
+<span class="hidden sm:inline text-[11px] text-neutral-600">LEDGER STRICT</span>
+</div>
+</section>
+</div>
+</main>
+<!-- Interactive Detail Inspection Modal (Clean & Honest) -->
+<div aria-labelledby="modal-title" aria-modal="true" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#06080b]/85 backdrop-blur-xl transition-opacity duration-200 opacity-0 pointer-events-none" id="detail-modal" role="dialog">
+<div class="relative w-full max-w-2xl rounded-2xl bg-[#0e1117] border border-white/15 p-6 md:p-8 flex flex-col gap-5 shadow-2xl transition-transform duration-200 scale-95 max-h-[88vh] overflow-y-auto" id="modal-dialog">
+<!-- Modal Top Bar -->
+<div class="flex items-center justify-between border-b border-white/10 pb-4">
+<div class="flex items-center gap-2.5">
+<span class="w-2 h-2 rounded-full bg-crimson"></span>
+<span class="font-mono-code text-[11px] uppercase tracking-wider text-neutral-400" id="modal-category">ARCHIVE RECORD</span>
+</div>
+<button aria-label="Close dialog" class="w-8 h-8 rounded-full bg-white/[0.05] hover:bg-white/[0.1] text-neutral-400 hover:text-white flex items-center justify-center transition-colors" onclick="closeRecordModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Title & Content -->
+<div>
+<div class="flex items-center gap-2 mb-2 font-mono-code text-[11px] text-neutral-400" id="modal-status-badge">
+          STATUS: VERIFIED
+        </div>
+<h2 class="font-mono-hero text-2xl md:text-3xl text-primary font-normal" id="modal-title">
+          Record Title
+        </h2>
+<p class="text-sm md:text-base text-neutral-300 mt-3 font-light leading-relaxed" id="modal-desc">
+          Record description will load here.
+        </p>
+</div>
+<!-- Technical Metadata Specifications -->
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-3 p-4 rounded-xl bg-surface-container-lowest border border-white/[0.07] font-mono-code text-xs">
+<div>
+<span class="text-[10px] text-neutral-500 uppercase block mb-1">RECORD TYPE</span>
+<span class="text-neutral-200" id="modal-type">Engineering Lab</span>
+</div>
+<div>
+<span class="text-[10px] text-neutral-500 uppercase block mb-1">TIMELINE / PHASE</span>
+<span class="text-neutral-200" id="modal-timeline">Ongoing</span>
+</div>
+<div>
+<span class="text-[10px] text-neutral-500 uppercase block mb-1">VALIDATION BASIS</span>
+<span class="text-crimson" id="modal-validation">Direct Code / Lab Run</span>
+</div>
+</div>
+<!-- Technical Scope Detail Block -->
+<div class="rounded-xl bg-white/[0.02] border border-white/[0.05] p-4 text-xs font-mono-code text-neutral-400 space-y-2">
+<div class="text-[10px] text-neutral-500 uppercase tracking-widest">TECHNICAL SPECIFICATION NOTES</div>
+<p class="leading-relaxed text-neutral-300" id="modal-notes">
+          Documented logs, setup manifests, and reproducible build scripts are cataloged locally.
+        </p>
+</div>
+<!-- Dismiss Button -->
+<div class="flex items-center justify-between pt-2 border-t border-white/10">
+<span class="font-mono-code text-[10px] text-neutral-500 uppercase">FANZ // TECHNICAL ARCHIVE</span>
+<button class="px-5 py-2 rounded-full bg-white/[0.08] hover:bg-white/[0.15] text-primary font-mono-code text-xs uppercase tracking-wider transition-colors border border-white/10" onclick="closeRecordModal()" type="button">
+          Dismiss Record
+        </button>
+</div>
+</div>
+</div>
+<!-- 5. Floating Liquid Glass Bottom Navigation Dock -->
+<div class="fixed bottom-6 inset-x-0 z-50 flex justify-center pointer-events-none px-4">
+<nav class="pointer-events-auto glass-dock rounded-full p-1.5 flex items-center gap-1 sm:gap-1.5"><a class="flex items-center gap-2 px-3 sm:px-3.5 py-2 rounded-full text-[#C5C6CA] hover:text-white hover:bg-white/[0.08] transition-all duration-200 font-mono-code text-xs uppercase tracking-wider group" href="/"><span class="material-symbols-outlined text-[16px] text-[#C5C6CA] group-hover:text-white transition-colors">home</span><span>Home</span></a>
+<div class="w-px h-4 bg-white/[0.12] mx-0.5"></div>
+<a class="flex items-center gap-2 px-3 sm:px-3.5 py-2 rounded-full text-[#C5C6CA] hover:text-white hover:bg-white/[0.08] transition-all duration-200 font-mono-code text-xs uppercase tracking-wider group" href="/projects"><span class="material-symbols-outlined text-[16px] text-[#C5C6CA] group-hover:text-white transition-colors">grid_view</span><span>Projects</span></a>
+<div class="w-px h-4 bg-white/[0.12] mx-0.5"></div>
+<a class="flex items-center gap-2 px-3 sm:px-3.5 py-2 rounded-full text-[#C5C6CA] hover:text-white hover:bg-white/[0.08] transition-all duration-200 font-mono-code text-xs uppercase tracking-wider group" href="/about"><span class="material-symbols-outlined text-[16px] text-[#C5C6CA] group-hover:text-white transition-colors">terminal</span><span>Skills</span></a>
+<div class="w-px h-4 bg-white/[0.12] mx-0.5"></div>
+<a aria-current="page" class="flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-full bg-white/[0.12] border border-white/[0.18] shadow-[inset_0_1px_1px_rgba(255,255,255,0.3)] text-white font-mono-code text-xs uppercase tracking-wider font-medium transition-all duration-200" href="/certificates"><span class="material-symbols-outlined text-[16px] text-white">verified</span><span>Certificates</span><span class="w-1.5 h-1.5 rounded-full bg-[var(--accent)] shadow-[0_0_8px_var(--accent)] ml-0.5"></span></a>
+<div class="w-px h-4 bg-white/[0.12] mx-0.5"></div>
+<a class="flex items-center gap-2 px-3 sm:px-3.5 py-2 rounded-full text-[#C5C6CA] hover:text-white hover:bg-white/[0.08] transition-all duration-200 font-mono-code text-xs uppercase tracking-wider group" href="/contact"><span class="material-symbols-outlined text-[16px] text-[#C5C6CA] group-hover:text-white transition-colors">person</span><span>About</span></a></nav>
+</div>
+</aside>
+<!-- Clean Editorial Footer -->
+<footer class="w-full border-t border-white/[0.06] bg-[#06080b]/90 backdrop-blur-xl py-6">
+<div class="w-full max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-3 font-mono-code text-xs text-neutral-500">
+<div class="flex items-center gap-2">
+<span class="text-primary font-mono-hero text-lg">Fanz</span>
+<span class="">— Editorial Archive &amp; Field Notes</span>
+</div>
+<div class="">© 2026 Fanz. All technical records preserved.</div>
+</div>
+</footer>
+<!-- Script for Modal Operations -->
+<script>
+    const recordsData = {
+      'homelab': {
+        category: 'INFRASTRUCTURE / HOMELAB',
+        statusBadge: 'STATUS: ACTIVE TESTBED // OPERATIONAL',
+        title: 'Virtualization & Network Lab (Proxmox VE & MikroTik CHR)',
+        desc: 'Dedicated physical lab architecture running Proxmox Virtual Environment as the core Type-1 hypervisor. Microservices and diagnostic tools are deployed within isolated Linux Containers (LXC). MikroTik CHR functions as the virtual edge router, isolating experimental segments from the host home network while facilitating traffic shaping and port-forwarding practice.',
+        type: 'Bare-Metal & Hypervisor Lab',
+        timeline: '2024 — Ongoing',
+        validation: 'Active Node Runtime',
+        notes: 'Configurations include ZFS local storage pooling, automated snapshot regimens, dynamic DNS integration, and resource overhead benchmarking.'
+      },
+      'aevo': {
+        category: 'DEPLOYMENT / CYBERSECURITY',
+        statusBadge: 'STATUS: COMPLETED PLATFORM SETUP',
+        title: 'Aevo CTF Platform Deployment',
+        desc: 'Deployment and custom tuning of the open-source CTFd framework designed to host targeted Capture The Flag competitions. Implemented Docker Compose multi-container composition, configured Nginx reverse proxy with SSL termination, authored custom challenges, and optimized score computation pipelines.',
+        type: 'Platform Engineering',
+        timeline: 'Completed & Configured',
+        validation: 'Demonstrated Practice Instance',
+        notes: 'Includes customized branding overrides, sandboxed challenge execution containers, and strict network segmentation to prevent sandbox escapes.'
+      },
+      'comet': {
+        category: 'SOFTWARE ENGINEERING / REALTIME',
+        statusBadge: 'STATUS: IN ACTIVE DEVELOPMENT',
+        title: 'COMET Chat Architecture',
+        desc: 'Independent software exploration implementing an efficient, concurrent real-time chat service. Focuses on low-latency bidirectional WebSocket connection multiplexing, room broadcasting semantics, reconnection backoff strategies, and structured JSON telemetry.',
+        type: 'Full-Stack System Prototype',
+        timeline: 'Active Milestone',
+        validation: 'Local Repository & Benchmarks',
+        notes: 'Benchmarking includes concurrent connection handling, message delivery latency histograms, and race condition checking with Go -race flags.'
+      },
+      'ctf': {
+        category: 'SECURITY RESEARCH / LAB DRILLS',
+        statusBadge: 'STATUS: ONGOING LAB PRACTICE',
+        title: 'CTF Practice & Security Labs',
+        desc: 'Regular offensive and defensive laboratory drills across HackTheBox, TryHackMe, and specialized local target VMs. Hands-on analysis of web application vulnerabilities (SQL Injection, XSS, SSRF, IDOR) and privilege escalation pathways on both Linux and Windows systems.',
+        type: 'Independent Security Drills',
+        timeline: 'Ongoing Drills',
+        validation: 'Private Writeups Kept',
+        notes: 'Detailed markdown walkthroughs documenting tool outputs (nmap, gobuster, burp suite) and root-cause analysis for each captured flag.'
+      },
+      'golang': {
+        category: 'SYSTEM PROGRAMMING / RUNTIME',
+        statusBadge: 'STATUS: ACTIVE STUDY LOGS',
+        title: 'Go Systems & Concurrency Notes',
+        desc: 'Detailed engineering journal and proof-of-concept repository tracking the intricacies of the Go runtime scheduler (GMP model), buffered vs. unbuffered channel synchronization, context propagation across micro-requests, and sync.Pool memory optimization patterns.',
+        type: 'Code & Systems Journal',
+        timeline: 'Ongoing Research',
+        validation: 'Archived Repositories',
+        notes: 'Focuses on writing idiomatic, zero-allocation Go routines with comprehensive benchmark tests and pprof CPU/memory profiling analysis.'
+      }
+    };
+
+    function openRecordModal(id) {
+      const data = recordsData[id];
+      if (!data) return;
+
+      document.getElementById('modal-category').innerText = data.category;
+      document.getElementById('modal-status-badge').innerText = data.statusBadge;
+      document.getElementById('modal-title').innerText = data.title;
+      document.getElementById('modal-desc').innerText = data.desc;
+      document.getElementById('modal-type').innerText = data.type;
+      document.getElementById('modal-timeline').innerText = data.timeline;
+      document.getElementById('modal-validation').innerText = data.validation;
+      document.getElementById('modal-notes').innerText = data.notes;
+
+      const modal = document.getElementById('detail-modal');
+      const dialog = document.getElementById('modal-dialog');
+
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+      modal.classList.add('opacity-100', 'pointer-events-auto');
+      dialog.classList.remove('scale-95');
+      dialog.classList.add('scale-100');
+
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeRecordModal() {
+      const modal = document.getElementById('detail-modal');
+      const dialog = document.getElementById('modal-dialog');
+
+      modal.classList.remove('opacity-100', 'pointer-events-auto');
+      modal.classList.add('opacity-0', 'pointer-events-none');
+      dialog.classList.remove('scale-100');
+      dialog.classList.add('scale-95');
+
+      document.body.style.overflow = '';
+    }
+
+    // Backdrop click listener
+    document.getElementById('detail-modal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeRecordModal();
+      }
+    });
+
+    // Escape key listener
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeRecordModal();
+      }
+    });
+  </script>
+
+
+</body></html>

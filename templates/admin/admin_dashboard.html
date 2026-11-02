@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="admin-nav">
+  <span style="color:var(--cyan);font-weight:700">Admin</span>
+  <a href="{{.AdminPath}}">Dashboard</a>
+  <a href="{{.AdminPath}}/bio">Bio</a>
+  <a href="{{.AdminPath}}/skills">Skills</a>
+  <a href="{{.AdminPath}}/projects">Projects</a>
+  <a href="/" target="_blank">↗ Lihat Web</a>
+  <span class="logout">
+    <form method="POST" action="{{.AdminPath}}/logout">
+      <button type="submit">Logout</button>
+    </form>
+  </span>
+</div>
+<div class="admin-wrap">
+  <p class="admin-title">Dashboard</p>
+  <div class="stat-grid">
+    <div class="stat-box">
+      <div class="num">{{.ProjectCount}}</div>
+      <div class="lbl">Projects</div>
+    </div>
+    <div class="stat-box">
+      <div class="num">{{.SkillCount}}</div>
+      <div class="lbl">Skills</div>
+    </div>
+  </div>
+  <p style="color:var(--muted);font-size:0.8rem">Kelola konten portofolio dari sini.</p>
+</div>
+</body>
+</html>
